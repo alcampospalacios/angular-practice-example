@@ -25,27 +25,14 @@ fxLayoutGap.xs="0">
           </mat-card>
     </div>
 
-    <div fxFlex="50" *ngIf="dish">
-        <mat-card>
-            <mat-card-header>
-              <mat-card-title>
-                <h2>Comments</h2>
-              </mat-card-title>
-            </mat-card-header>      
-            
-            <mat-card-content>                    
-                <mat-list>
-                    <mat-list-item *ngFor="let comment of dish.comments">
-                        {{comment.comment}} <br/>
-                        {{comment.rating}} Stars <br/>
-                        {{comment.author}}  <br/>
-                        --{{comment.date | date}} <br/>
-                    </mat-list-item>                    
-
-                </mat-list>              
-            </mat-card-content>            
-          </mat-card>
+    <div fxFlex="50">       
+      <mat-list *ngIf="dish">             
+        <h3>Comments</h3>          
+          <mat-list-item *ngFor="let comment of dish.comments">
+          <h4 matLine> {{comment.comment}} </h4>
+          <p matLine> {{comment.rating}} Stars </p>
+          <p matLine> <span> -- {{comment.author}} {{comment.date | date}} </span> </p>                        
+        </mat-list-item>
+      </mat-list>
     </div>
-
-</div>
 
