@@ -9,3 +9,15 @@
 .form-size {
     width: 75%
 }
+
+.isDisabled {
+    background-color: darkgrey!important;
+    color: floralwhite!important;
+}
+
+$background-dark: #512DA8;
+
+.isEnabled {
+    background-color: $background-dark!important;
+    color: floralwhite!important;
+  }
